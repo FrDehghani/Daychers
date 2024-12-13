@@ -7,14 +7,14 @@ with open('D:\\Dayche\\4-python\\recorse\\FBI_CrimeData_2016.json', 'r') as json
     data = json.load(jsonFile)
 
 regions = [item['Region'] for item in data]  # the horizontal axis values
-# murder_counts = [item['Murder'] for item in data]  # the vertical axis values
-# plt.bar(regions, murder_counts , color='b')  # define the barchart
-# plt.xlabel('Regions')
-# plt.ylabel('Number of Murders')
-# plt.title('Number of Murders by Region')
-# plt.yticks(list(range(0, int(max(murder_counts)) + 10, 10)))  # Set ticks at intervals of 10 for y_axis
-# plt.tight_layout()
-# plt.show()
+murder_counts = [item['Murder'] for item in data]  # the vertical axis values
+plt.bar(regions, murder_counts , color='b')  # define the barchart
+plt.xlabel('Regions')
+plt.ylabel('Number of Murders')
+plt.title('Number of Murders by Region')
+plt.yticks(list(range(0, int(max(murder_counts)) + 10, 10)))  # Set ticks at intervals of 10 for y_axis
+plt.tight_layout()
+plt.show()
 # #
 # print('\n', '\n', '\n', '*' * 50)
 # =================================================================================================
@@ -32,25 +32,25 @@ for item in data:  # define two columns for data by sum of violent and not-viole
 
 Violent_counts = [item['Violent'] for item in data]  # create list of values that should make barchart
 NonViolent_counts = [item['NonViolent'] for item in data]
-# print(max(Violent_counts))
-# print(max(NonViolent_counts))
-# plt.bar(regions, Violent_counts, color='g')  # define the barchart  # my chart!
-# plt.xlabel('Regions')
-# plt.ylabel('Number of Violent crimes')
-# plt.title('Number of Violent crimes by Region')
-# plt.yticks(list(range(0, int(max(Violent_counts)) + 5000, 5000)))  # Set ticks at intervals of 10 for y_axis
-# plt.tight_layout()
-# plt.show()
+print(max(Violent_counts))
+print(max(NonViolent_counts))
+plt.bar(regions, Violent_counts, color='g')  # define the barchart  # my chart!
+plt.xlabel('Regions')
+plt.ylabel('Number of Violent crimes')
+plt.title('Number of Violent crimes by Region')
+plt.yticks(list(range(0, int(max(Violent_counts)) + 5000, 5000)))  # Set ticks at intervals of 10 for y_axis
+plt.tight_layout()
+plt.show()
 
 # =================================================================================================
 # 3th question
-# plt.bar(regions, NonViolent_counts, color='y')  # define the barchart  # my chart!
-# plt.xlabel('Regions')
-# plt.ylabel('Number of NonViolent crimes')
-# plt.title('Number of Non_Violent crimes by Region')
-# plt.yticks(list(range(0, int(max(NonViolent_counts)) + 10000, 10000)))  # Set ticks at intervals of 10 for y_axis
-# plt.tight_layout()
-# plt.show()  ## masking by pandas of nompy  o
+plt.bar(regions, NonViolent_counts, color='y')  # define the barchart  # my chart!
+plt.xlabel('Regions')
+plt.ylabel('Number of NonViolent crimes')
+plt.title('Number of Non_Violent crimes by Region')
+plt.yticks(list(range(0, int(max(NonViolent_counts)) + 10000, 10000)))  # Set ticks at intervals of 10 for y_axis
+plt.tight_layout()
+plt.show()  ## masking by pandas of nompy  o
 
 # ==================================================================================================
 # 4th question
